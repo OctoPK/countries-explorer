@@ -1,0 +1,19 @@
+/* styles.css - À placer dans src/assets/ et importer dans App.vue */
+/* import './assets/styles.css' */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
