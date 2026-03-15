@@ -18,5 +18,7 @@ const props = defineProps({
     <router-link :to="{ name: 'details', params: { id: country.name.common } }">
       <button>Voir les détails</button>
     </router-link>
+
+    <slot></slot>
   </div>
 </template>

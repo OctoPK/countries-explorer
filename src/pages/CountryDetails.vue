@@ -4,7 +4,7 @@ import { useFetch } from '../composables/useFetch.js'
 import { VisitedCountriesStore } from '../stores/VisitedCountrieStore.js'
 import { computed } from 'vue'
 
-const { addCountry, removeCountry } = VisitedCountriesStore()
+const { addCountry, removeCountry, hasCountry } = VisitedCountriesStore()
 const route = useRoute()
 const router = useRouter()
 const { data: countryArray, loading } = useFetch(
@@ -57,6 +57,6 @@ function handleCheckboxChange(event) {
     </p>
 
     Pays visité
-    <input type="checkbox" @change="handleCheckboxChange" />
+    <input type="checkbox" @change="handleCheckboxChange" :checked="hasCountry(country)" />
   </div>
 </template>
